@@ -1,0 +1,86 @@
+1.Write a blog on Difference between HTTP1.1 vs HTTP2 
+
+
+
+Title: Understanding the Differences Between HTTP/1.1 and HTTP/2
+
+Introduction:
+The Hypertext Transfer Protocol (HTTP) is a fundamental protocol used for communication on the World Wide Web. Over time, various versions of HTTP have been developed to enhance performance, security, and efficiency. In this blog post, we'll delve into the differences between two significant versions: HTTP/1.1 and HTTP/2.
+
+HTTP/1.1: The Old Reliable
+HTTP/1.1 has been the dominant protocol for over a decade. While it served its purpose well, it has certain limitations that led to the development of HTTP/2. Here are some key characteristics of HTTP/1.1:
+
+Serial Processing: In HTTP/1.1, requests and responses are processed sequentially. The browser sends a request, waits for the server to respond, and then proceeds with the next request. This creates a latency issue known as the "head-of-line blocking" problem, where subsequent requests are delayed due to the dependency on earlier responses.
+
+Text-Based Protocol: HTTP/1.1 relies on plain text for communication, which includes headers, cookies, and content. Although human-readable, the verbosity of text-based communication can increase network overhead and consume additional bandwidth.
+
+Compression and Minification: To optimize data transmission, developers use techniques like compression and minification to reduce file sizes. However, these optimizations are often applied at the expense of increased server load and additional processing.
+
+Resource Inlining and Spriting: In HTTP/1.1, developers often use techniques like resource inlining and spriting to reduce the number of requests. However, these workarounds come with trade-offs and can complicate the development process.
+
+HTTP/2: The Next Generation
+With the need for improved performance and efficiency, HTTP/2 was introduced as a significant upgrade to HTTP/1.1. Let's explore some of its key features:
+
+Multiplexing: HTTP/2 introduces multiplexing, which allows for concurrent requests and responses on a single connection. This resolves the head-of-line blocking problem and significantly improves page load times by enabling parallel processing of requests.
+
+Binary Protocol: HTTP/2 uses a binary protocol instead of plain text, which reduces overhead and makes communication more efficient. The binary framing layer enables better compression and faster parsing.
+
+Server Push: One of the most notable features of HTTP/2 is server push. It allows the server to proactively send additional resources to the client before they are explicitly requested. This eliminates the need for workarounds like resource inlining and spriting.
+
+Header Compression: HTTP/2 utilizes header compression to reduce the size of request and response headers. This helps to minimize the overhead caused by redundant header data, resulting in improved performance.
+
+Prioritization: HTTP/2 introduces stream prioritization, allowing developers to specify the importance of each resource. This feature enables more efficient resource allocation and ensures that critical assets are delivered promptly.
+
+Conclusion:
+HTTP/2 is a significant advancement over HTTP/1.1, addressing the limitations and inefficiencies of its predecessor. The introduction of multiplexing, binary protocol, server push, header compression, and prioritization greatly enhances the performance, efficiency, and user experience of web applications.
+
+As web technologies continue to evolve, understanding the differences between HTTP versions becomes crucial for developers and network administrators. Migrating to HTTP/2 can offer substantial benefits, but it's essential to ensure compatibility and proper server configuration.
+
+By embracing HTTP/2, websites can take advantage of its powerful features
+
+
+
+2.Write a blog about objects and its internal representation in Javascript
+
+
+
+
+Title: Understanding Objects and Their Internal Representation in JavaScript
+
+Introduction:
+JavaScript, as an object-oriented programming language, relies heavily on objects for data manipulation and abstraction. Objects play a central role in JavaScript development, enabling the creation of complex data structures and providing a foundation for object-oriented programming concepts. In this blog post, we will explore the concept of objects in JavaScript and delve into their internal representation.
+
+What are Objects in JavaScript?
+In JavaScript, objects are composite values that consist of properties and methods. They are used to represent real-world entities, such as a user, a car, or any other entity with distinct characteristics and behaviors. Objects encapsulate related data and functionality, allowing for modular and organized code.
+
+Creating Objects in JavaScript:
+There are multiple ways to create objects in JavaScript. The most common approach is using object literals, where you define the object and its properties directly within curly braces:
+
+const person = {
+  name: 'John',
+  age: 30,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+  }
+};
+
+
+Internal Representation of Objects:
+Internally, JavaScript objects are implemented as key-value pairs, where each property is associated with a value. Behind the scenes, objects use a variety of data structures to store and access these properties efficiently.
+
+Hash Tables:
+JavaScript objects typically use hash tables for property storage and retrieval. A hash table, also known as a hash map, is a data structure that uses hash codes to store and retrieve values. It provides constant-time average complexity for accessing properties.
+
+Prototype Chain:
+In JavaScript, objects have a hidden property called [[Prototype]] (also known as the prototype chain), which allows them to inherit properties and methods from other objects. This mechanism forms the basis of prototype-based inheritance in JavaScript.
+
+Property Descriptors:
+Each property in a JavaScript object is associated with a property descriptor, which defines the attributes and behavior of that property. Property descriptors can control whether a property is writable, enumerable, configurable, or if it has a getter/setter function.
+
+Object Methods:
+JavaScript objects come with built-in methods, such as Object.keys(), Object.values(), and Object.getOwnPropertyNames(), which allow you to retrieve information about the properties of an object or manipulate them programmatically.
+
+Conclusion:
+Objects are a fundamental concept in JavaScript, enabling developers to organize data and behavior into reusable entities. Understanding the internal representation of objects helps in optimizing code performance and leveraging advanced features like prototype-based inheritance. With a solid grasp of objects in JavaScript, developers can build complex and robust applications while adhering to object-oriented principles.
+
+As you continue your JavaScript journey, explore object-oriented programming patterns, design principles, and techniques to fully leverage the power of objects. By mastering objects and their internal representation, you'll unlock the true potential of JavaScript for building dynamic and scalable applications.
